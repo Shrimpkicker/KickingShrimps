@@ -3,55 +3,124 @@
     <head>
       <meta charset="utf-8">
       <title>CSP_P2</title>
-      <style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.navbar {
+    overflow: hidden;
+    background-color: Purple;
+    font-family: Arial;
+}
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #8B008B;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: magenta;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #EE00EE;
+}
+.show {
+    display: block;
+}
         body {
           background-image: url('https://media.giphy.com/media/3o7TKLTCDV7a4V86By/giphy.gif');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: 100% 100%;
         }
-	    a:link {
-    color: yellow; 
+a:link {
+    color: white; 
     background-color: transparent; 
     text-decoration: none;
 }
 
 a:visited {
-    color: yellow;
+    color: white;
     background-color: transparent;
     text-decoration: none;
 }
 
 a:hover {
-    color: red;
+    color: white;
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: None;
 }
 
 a:active {
-    color: red;
+    color: white;
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: none;
 }
       </style>
     </head>
-    
-     	<a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
-			<a href="csp_p2.html">CSP</a>	
-			<center>
-				<font color="yellow"><h1>This is my test CSP website!</h1></font>
-				<a href="https://scratch.mit.edu/projects/173428647/"><font size="+4">My Scratch Project</font></a>
-      	<br>
-				<a href="files/Shreack_Klicker.aia"><font size="+4">OUR APP: Shreack Klicker</font></a>
-      	<br>
-				<a href="https://repl.it/MbCE/3"><font size="+4">Our Story (repl.it)</font></a>
-	<br>
-				<a href="files/1-3Proj.py"><font size="+4">Poker Game in Python!</font></a>
-	<br>
-				<a href="files/CSP Explore Task Artifact Cameron Bill.pdf"><font size="+4">AP CSP Computer Artifact</font></a>
-	<br>
-				<a href="files/Written Response for AP CSP.docx"><font size="+4">AP CSP Written Response</font></a>
-			</center> 
+    <body>
+     	<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="portfolio.html">Portfolio</a>
+<a href="csp_p2.html">CSP</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Projects
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="https://scratch.mit.edu/projects/173428647/"><font size="+4">My Scratch Project</font></a>
+	<a href="files/Shreack_Klicker.aia"><font size="+4">OUR APP: Shreack Klicker</font></a>
+	<a href="https://repl.it/MbCE/3"><font size="+4">Our Story (repl.it)</font></a>
+	<a href="files/1-3Proj.py"><font size="+4">Poker Game in Python!</font></a>
+	<a href="files/CSP Explore Task Artifact Cameron Bill.pdf"><font size="+4">AP CSP Computer Artifact</font></a>
+	<a href="files/Written Response for AP CSP.docx"><font size="+4">AP CSP Written Response</font></a>
+    </div>
+  </div> 
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+</script>			
     </body>
   </html>
