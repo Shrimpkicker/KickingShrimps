@@ -98,6 +98,27 @@ a:active {
 }
 		</style>
 <body>
+	<script type="text/javascript">
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  var suffix = "AM";  // use AM by default
+
+  if (minutes < 10)
+    minutes = "0" + minutes;
+
+  if (hours >= 12) {
+    suffix = "PM";
+    hours = hours - 12;
+  }
+  if (hours == 0) {
+    hours = 12;
+  }
+
+  document.write("<b><div id='d1'>" + hours + ":" +
+   minutes + " " + suffix + "</div></b>");
+
+</script>
 <div class="navbar">
   <a href="index.html">Home</a>
   <a href="portfolio.html">Portfolio</a>
