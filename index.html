@@ -96,11 +96,6 @@ a:active {
     background-color: transparent;
     text-decoration: none;
 }
-    .red {background: red;};
-    .blue {background: blue;};
-    .green {background: green;};
-    .yellow {background: yellow;};
-    .white {background: white;};
 		</style>
 <body>
 	<script type="text/javascript">
@@ -120,10 +115,18 @@ a:active {
     hours = 12;
   }
 
-  document.write("<span class='white'><b><div id='d1'>" + hours + ":" +
+  document.write("<b><div id='d1'>" + hours + ":" +
    minutes + " " + suffix + "</div></b>");
-
+function hideElement(id_attribute_value) {
+	  		  if (document.getElementById &&
+				  document.getElementById(id_attribute_value) &&
+		  		  document.getElementById(id_attribute_value).style
+	  		  ) {
+  document.getElementById(id_attribute_value).style.visibility = "hidden";
+		  	  };
+	  		}
 </script>
+<button type="button" onclick="hideElement('d1');">hide div</button>
 <div class="navbar">
   <a href="index.html">Home</a>
   <a href="portfolio.html">Portfolio</a>
