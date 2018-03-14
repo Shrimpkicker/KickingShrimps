@@ -15,7 +15,7 @@
 		{
 			var im1 = document.getElementById("img1popin");
 			im1.id = "img1popout";
-			im1.innerHTML = "<br /><TABLE><TR><TH rowspan='3'><img src='1.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Mike Myers<TR><TH align='left'>File Name: <TH align='left'>1.jpg<TR></TABLE> ";
+			im1.innerHTML = "<br /><TABLE><TR><TH rowspan='3'><img src='1.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Mike Myers<TR><TH align='left'>File Name: <TH align='left'>images/1.jpg<TR></TABLE> ";
 			var popOut = document.getElementById("img1popout");
 			popOut.onmouseout = hideDetailedView;			
 		}
@@ -32,9 +32,25 @@
     <a href="index.html">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="csp_p2.html">CSP</a>
+<table>
+<tbody>
+<tr>
+<td>
     <img id="image1" src="images/1.jpg" height="250"><div id = "img1popin"></div>
+</td>
+<td>
     <img src="images/2.jpg" height="250">
+</td>
+</tr>
+<tr>
+<td>
     <img src="images/3.jpg" height="250">
+</td>
+<td>
     <img src="images/4.jpg" height="250">
-  </body>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
 </html>
